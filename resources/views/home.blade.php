@@ -11,13 +11,11 @@
 <body>
     <h1>Ranking Tennis Players</h1>
     <ul>
-        @if(count($players))
-            @foreach ($players as $player)
+        @forelse($players as $player)
             <li>{{$player}}</li>
-            @endforeach
-        @else
+        @empty
             <h3>Non ci sono giocatori</h3>
-        @endif
+        @endforelse
     </ul>
     
 </body>
