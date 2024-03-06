@@ -15,6 +15,6 @@
             <h3>Non ci sono giocatori</h3>
         @endforelse
     </ul>
-    
+    <a href="{{route('home')}}">Torna alla Home</a>
 </body>
 </html>
