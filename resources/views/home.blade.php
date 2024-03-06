@@ -12,7 +12,7 @@
     <h1>Ranking Tennis Players</h1>
     <ul>
         @forelse($players as $player)
-            <li>{{$player}}</li>
+            <li>{{$player['name']}} {{$player['surname']}}</li>
         @empty
             <h3>Non ci sono giocatori</h3>
         @endforelse
