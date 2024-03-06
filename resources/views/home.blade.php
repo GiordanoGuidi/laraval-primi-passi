@@ -11,9 +11,13 @@
 <body>
     <h1>Ranking Tennis Players</h1>
     <ul>
-        <?php foreach ($players as $player): ?>
-        <li><?= $player ?></li>
-        <?php endforeach; ?>
+        @if(count($players))
+            @foreach ($players as $player)
+            <li>{{$player}}</li>
+            @endforeach
+        @else
+            <h3>Non ci sono giocatori</h3>
+        @endif
     </ul>
     
 </body>
