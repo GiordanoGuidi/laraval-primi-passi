@@ -14,12 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('home');
+});
+
+Route::get('players', function () {
     $players = [
-        ['name' => 'Novak', 'surname' => 'Djokovich'],
-        ['name' => 'Carlos', 'surname' => 'Alcaraz'],
-        ['name' => 'Jannik', 'surname' => 'Sinner'],
-        ['name' => 'Daniil', 'surname' => 'Medvedev'],
-        ['name' => 'Andrey', 'surname' => 'Rublev'],
+        ['position' => 1, 'name' => 'Novak', 'surname' => 'Djokovich'],
+        ['position' => 2, 'name' => 'Carlos', 'surname' => 'Alcaraz'],
+        ['position' => 3, 'name' => 'Jannik', 'surname' => 'Sinner'],
+        ['position' => 4, 'name' => 'Daniil', 'surname' => 'Medvedev'],
+        ['position' => 5, 'name' => 'Andrey', 'surname' => 'Rublev'],
     ];
-    return view('home', compact('players'));
+    return view('tennis.players', compact('players'));
 });

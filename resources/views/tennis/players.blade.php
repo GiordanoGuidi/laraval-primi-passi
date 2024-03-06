@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>ATP TOUR Tennis</h1>
+    <h1>Ranking Tennis Players</h1>
+    <ul>
+        @forelse($players as $player)
+            <li>{{$player['position']}} - {{$player['name']}} {{$player['surname']}}</li>
+        @empty
+            <h3>Non ci sono giocatori</h3>
+        @endforelse
+    </ul>
     
 </body>
 </html>
