@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('players', function () {
     $players = [
@@ -26,4 +26,4 @@ Route::get('players', function () {
         ['position' => 5, 'name' => 'Andrey', 'surname' => 'Rublev'],
     ];
     return view('tennis.players', compact('players'));
-});
+})->name('players');

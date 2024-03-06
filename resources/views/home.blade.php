@@ -10,7 +10,7 @@
 <body>
     <h1>ATP TOUR Tennis</h1>
     <header>
-       
+       <a href="{{ route('players') }}">Ranking ATP</a>
     </header>
     
 </body>
