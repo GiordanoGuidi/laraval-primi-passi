@@ -10,6 +10,11 @@
 </head>
 <body>
     <h1>Ranking Tennis Players</h1>
+    <ul>
+        <?php foreach ($players as $player): ?>
+        <li><?= $player ?></li>
+        <?php endforeach; ?>
+    </ul>
     
 </body>
 </html>
