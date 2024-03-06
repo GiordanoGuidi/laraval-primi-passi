@@ -1,3 +1,5 @@
+@dump($players)
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Ranking Tennis Players</h1>
+    <h1>Players</h1>
     
 </body>
 </html>

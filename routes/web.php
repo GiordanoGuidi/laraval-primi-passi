@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/players', function () {
-    return view('tennis.players');
+    $players = ['Djokovich', 'Alcaraz', 'Sinner', 'Medvedev', 'Rublev'];
+    return view('home', compact('players'));
 });
