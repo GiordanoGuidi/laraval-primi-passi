@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>ATP TOUR Tennis</h1>
-    <header>
-       <a href="{{ route('players') }}">Ranking ATP</a>
-       <a href="{{route('tournaments') }}">Tournaments</a>
-    </header>
+    <h1>Tournamentes ATP</h1>
+    <ul>
+        @forelse($tournaments as $tournament)
+            <li>{{$tournament['name']}} - {{$tournament['location']}}</li>
+        @empty
+            <h3>Non ci sono tornei disponibili</h3>
+        @endforelse
+
+    </ul>
     
 </body>
 </html>

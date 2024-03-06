@@ -27,3 +27,14 @@ Route::get('players', function () {
     ];
     return view('tennis.players', compact('players'));
 })->name('players');
+
+Route::get('tournaments', function () {
+    $tournaments = [
+        ['name' => 'Indian Wells Masters 1000', 'location' => 'California'],
+        ['name' => 'Miami Masters 1000', 'location' => 'Miami'],
+        ['name' => ' Montecarlo Masters 1000', 'location' => 'Montecarlo'],
+        ['name' => 'Roma Masters 1000', 'location' => 'Roma'],
+
+    ];
+    return view('tennis.tournaments', compact('tournaments'));
+})->name('tournaments');
